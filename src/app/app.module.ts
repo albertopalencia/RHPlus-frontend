@@ -50,10 +50,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { authInterceptorProviders } from './helpers/auth.interceptor';
 import { HomeComponent } from './home/home.component';
-import { BoardAdminComponent } from './board-admin/board-admin.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
-
-
 
 
 @NgModule({
@@ -84,7 +81,6 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
     LoginComponent,
     RegisterComponent,
     HomeComponent,
-    BoardAdminComponent,
     LandingPageComponent,
  
   

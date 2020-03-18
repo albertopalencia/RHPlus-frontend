@@ -18,7 +18,7 @@ import { CaisseComponent } from './components/admin-components/caisse/caisse.com
 import { TimetrackingComponent } from './components/employe-components/timetracking/timetracking.component';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
-import { BoardAdminComponent } from './board-admin/board-admin.component';
+
 import { LandingPageComponent } from './landing-page/landing-page.component';
 
 
