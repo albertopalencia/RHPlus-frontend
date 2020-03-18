@@ -1,0 +1,36 @@
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="#"> R.H </a></li>
+      <li class="breadcrumb-item active" aria-current="page"> Profils </li>
+    </ol>
+  </nav>
+  <form class="form-inline ml-5">
+    <input class="form-control mr-sm-2" type="search" name="motCle" placeholder="Recherche" aria-label="Search" [(ngModel)] = 'motCle'>
+    <button class="btn btn-success my-2 my-sm-0" type="submit" (click)="chercher()">Chercher</button>
+  </form>
+  <section class="container mt-4 mb-4">
+  
+    <div class="container">
+      <div class="row mb-3">
+  
+        <div class="col-md-6 mb-3"  *ngFor="let e of pageUsers?.content">
+          <div class="d-flex flex-row border rounded bg-light">
+            <div class="p-0 w-25">
+              <img src = "assets/avatar.png"  width="130px" height="130px" class="img-thumbnail border-0">
+            </div>
+            <div class="pl-3 pt-2 pr-2 pb-2 w-75 border-left">
+              <h4 class="text-primary"> {{e.nom}} {{e.prenom}}</h4>
+              <h5 class="text-info"> {{e.typeEmploye}} </h5>
+              <ul class="m-0 float-left" style="list-style: none; margin:0; padding: 0">
+                <li> ID : {{e.idUtilisateur}}</li>
+                <li><i class="fa fa-envelope-o"></i> {{e.email}} </li>
+              </ul>
+              <p class="text-right m-0"><a href="javascript:void(0);"  class="btn btn-primary" (click)="getdetailsUser(e.idUtilisateur)"><i class="fa fa-user"></i> Voir Profil</a></p>
+            </div>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+  

@@ -1,0 +1,98 @@
+<section class="wrapper">
+    <div class="row mt">
+      <div class="col-lg-4">
+        <!--  BASIC BUTTONS -->
+        <div class="showback">
+          
+              <h4 _ngcontent-wxf-c4="" class="mb">
+                  <i _ngcontent-wxf-c4="" class="fa fa-angle-right"></i> Image</h4>
+                  <img _ngcontent-wxf-c4="" class="img-circle" src="assets/img/worker.png" style="margin-left:50px " width="140">
+                  <form _ngcontent-wxf-c4="" class="form-horizontal style-form" novalidate="">
+                      <div _ngcontent-wxf-c4="" style="margin-left:90px">
+                        <div _ngcontent-wxf-c4="" style="margin-top:15px">
+                            <input _ngcontent-wxf-c4="" id="customFile" type="file">
+                        </div>
+                    </div>
+                    <div _ngcontent-wxf-c4="" style="margin-left:110px">
+                        <div _ngcontent-wxf-c4="" style="margin-top:8px">
+                            <button _ngcontent-wxf-c4="" class="btn btn-primary">Save File</button>
+                        </div>
+                    </div>
+                </form>
+        
+        </div>
+        <!-- /showback -->
+        <!--  BUTTONS ROUND -->
+        <div class="showback">
+          <h4><i class="fa fa-angle-right"></i> Coordonnées</h4>
+          <div style="margin-top: 5%;">
+          <p>Nom {{employe.nom}}</p>
+          <p>Prénom {{employe.prenom}}</p>
+          <p>Date de naissance {{employe.dateOfBirth}}</p>
+          <p>Tél {{employe.phone}}</p>
+          <p>Email {{employe.email}}</p>
+          <p>Adresse {{employe.adresse}}</p>
+        </div>
+          
+        </div>
+        
+        
+      </div>
+      <!-- /col-lg-6 -->
+      <div class="col-lg-8 ">
+        <!--  BUTTONS SIZES -->
+        <div class="showback">
+          <h4><i class="fa fa-angle-right"></i> Congés</h4>
+          
+          <table class="table table-striped table-advance table-hover" class="content-table">
+
+            <thead>
+            <tr>
+              <th>Début</th>
+              <th>Fin</th>
+              <th>Jour(s) pris</th>
+              <th>Etat</th>
+    
+            </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let employe of employees">
+                    <td>{{conge.debutCong}}</td>
+                    <td>{{conge.finCong}}</td>
+                    <td>{{conge.duree}}</td>
+                    <td>{{conge.statusOfDemand}}</td>
+                
+                </tr>
+            </tbody>
+          </table>
+        
+         
+        </div>
+        
+
+        <!-- /showback -->
+        <!-- BUTTON BLOCK -->
+        <div class="showback">
+          <h4><i class="fa fa-angle-right"></i> Poste</h4>
+          <div style="margin-top: 5%;">
+            <p>Département {{employe.departement}}</p>
+            <p>Fonction {{employe.fonction}}</p>
+            <p>Type de contrat {{employe.typeContrat}}</p>
+            <p>Date d'entrée {{employe.dateEntree}}</p>
+            <p>Salaire de base {{employe.salary}}</p>
+            <p>Cout des heures suplementaires {{employe.coutHeuresSup}}</p>
+        </div>
+           
+
+            
+
+        </div>
+        <!--/showback -->
+    
+       
+        <!-- /showback -->
+      </div>
+      <!-- /col-lg-8 -->
+    </div>
+    <!--/ row -->
+  </section>

@@ -1,0 +1,30 @@
+p{
+    font-size: 12px;
+}
+
+.content-table {
+    border-collapse: collapse;
+    margin: 30px 50px;
+    font-size: 0.5cm;
+    min-width: 10px;
+    border-radius: 5px 5px 0 0 ; 
+    overflow: hidden ;
+}
+
+.content-table thead tr {
+    background-color: #4ECDC4;
+    color: antiquewhite;
+    text-align: left;
+    font-weight: bold;
+}
+
+.content-table th,
+.content-table td {
+    padding: 0.1px 35px;
+}
+
+.fa fa-angle-right{
+    font-weight: bold;
+    font-size: 70%px;
+
+}

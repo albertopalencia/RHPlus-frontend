@@ -1,0 +1,44 @@
+
+
+   <h3><i class="fa fa-angle-right" style="margin-top: 3%;"></i> Candidats</h3>
+   
+    <table class="table table-striped" style="margin-top: 2%;">
+  
+      <thead class="thead-inverse">
+      <tr>
+        <th>prenom</th>
+        <th>nom</th>
+        <th>email</th>
+        <th>CV</th>
+        <th>action</th>
+      </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let candidate of candidats" >
+              <td>{{candidate.prenom}}</td>
+              <td>{{candidate.nom}}</td>
+              <td>{{candidate.email}}</td>
+              <td>{{candidate.pathCv}}
+                <button (click)="download(candidate)">download</button>
+                
+              </td>
+              <td>
+                <button class="btn btn-success btn-xs"><i class=" fa fa-check"></i></button>
+              </td>
+  
+          </tr>
+      </tbody>
+    </table>
+
+ 
+  
+
+
+
+
+
+
+
+
+
+

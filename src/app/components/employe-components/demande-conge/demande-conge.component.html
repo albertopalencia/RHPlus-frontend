@@ -1,0 +1,75 @@
+
+
+<div style="margin-top: 5%;">
+
+</div>
+
+<div class="row mt" style="padding-left: 10%; padding-right:10%">
+    
+    <div class="col-lg-12 col-md-12 col-sm-12" >
+        <div class="showback" style="background-color:rgba(39, 31, 31, 0.068)">
+            <h4><i class="fa fa-angle-center"></i> Demande de congès :</h4>
+        
+        </div>
+
+    </div>
+
+    <div class="col-lg-12 col-md-12 col-sm-12" >
+      <!--  BASIC BUTTONS -->
+      <div class="showback" style="background-color:rgba(39, 31, 31, 0.068)">
+        
+        <form class="form-horizontal style-form" style="margin-top: 20px;">
+        <div class="form-group">
+            <label class="col-sm-2 col-sm-2 control-label">Durée</label>
+            <div class="col-sm-10">
+              <input type="text" [(ngModel)]="conge.duree" class="form-control" name="duree" id="duree" placeholder="">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 col-sm-2 control-label">Date de début</label>
+            <div class="col-sm-10">
+              <input type="date" [(ngModel)]="conge.debutCong" class="form-control" name="debutCong" id="debutCong" placeholder="">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 col-sm-2 control-label">Date de fin </label>
+            <div class="col-sm-10">
+                <input type="date" [(ngModel)]="conge.finCong" class="form-control" name="finCong" id="finCong" placeholder="">
+              
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 col-sm-2 control-label" >Type de congé</label>
+            <div style="margin-top:5px" class="col-sm-10">
+              <select class="col-sm-12" id="cars" name="cars">
+                <option value="Congé sans solde" [(ngModel)]="conge.typeCong" name="typeCong" id="typeCong" >Congé sans solde</option>
+                <option value="Congé annuel" [(ngModel)]="conge.typeCong" name="typeCong" id="typeCong">Congé annuel</option>
+                <option value="Congé maladie" [(ngModel)]="conge.typeCong" name="typeCong" id="typeCong">Congé maladie</option>
+                <option value="Congé maternité" [(ngModel)]="conge.typeCong" name="typeCong" id="typeCong">Congé maternité</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 col-sm-2 control-label">Cause</label>
+            <div class="col-sm-10">
+              <textarea class="form-control" [(ngModel)]="conge.description" name="description" id="description" placeholder="" rows="10" data-rule="required"></textarea>
+            </div>
+        </div>
+         
+        </form>
+        
+      </div>
+      
+    </div>
+    
+      <!-- DROPDOWN BUTTONS -->
+      <div  class="col-lg-12 col-md-12 col-sm-12" >
+        <button type="button" class="btn btn-info" 
+        style="margin-left: 390px;background-color:grey"
+        (click)="createDemandeConge()">Enregistrer</button>
+        
+      </div>
+      
+      
+</div>
+    

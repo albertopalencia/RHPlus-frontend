@@ -1,0 +1,42 @@
+
+  <div class="card-header text-light bg-secondary" style="margin-top: 3%;"> Liste des employés </div>
+  <div class="card-body bg-light">
+
+  <table class="table table-striped">
+
+    <thead class="thead-inverse">
+    <tr>
+      <th>prenom</th>
+      <th>nom</th>
+      <th>phone</th>
+      <th>email</th>
+      <th>status</th>
+      <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let employe of employees" >
+            <td>{{employe.prenom}}</td>
+            <td>{{employe.nom}}</td>
+            <td>{{employe.phone}}</td>
+            <td>{{employe.email}}</td>
+            <td>{{employe.status}}</td> 
+            <td>
+              <button class="btn btn-success btn-xs" [routerLink]="['/profilEmploye', employe.idUser]"><i class="fa fa-check"></i></button>
+              <button class="btn btn-primary btn-xs" (click)="onEdit(row)"><i class="fa fa-pencil"></i></button> 
+              <button class="btn btn-danger btn-xs" (click)="deleteEmploye(employe)"><i class="fa fa-trash-o "></i></button>
+          
+            </td>
+
+           
+        </tr>
+    </tbody>
+  </table>
+</div>
+
+
+
+
+
+   
+    

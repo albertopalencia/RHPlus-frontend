@@ -1,0 +1,50 @@
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="#"> R.H </a></li>
+      <li class="breadcrumb-item active" aria-current="page"> Congés </li>
+    </ol>
+  </nav>
+  <div class="card">
+      <div class="card-header text-light bg-secondary"> Liste des congés </div>
+      <div class="card-body bg-light">
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" name="motCle" placeholder="Recherche" aria-label="Search" [(ngModel)] = 'motCle'>
+        <button class="btn btn-success my-2 my-sm-0" type="submit" (click)="chercher()">Chercher</button>
+      </form>
+  <br>
+        <table class="table table-striped">
+        <thead class="thead-inverse">
+        <tr>
+          <th>ID</th>
+          <th>Nom</th>
+          <th>Prénom</th>
+          <th>Email</th>
+          <th>Date Naissance</th>
+          <th>Type</th>
+          <th>Détails</th>
+  
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let e of pageUsers?.content">
+          <td>{{ e.idUtilisateur }}</td>
+          <td>{{ e.nom }}</td>
+          <td>{{ e.prenom }}</td>
+          <td>{{ e.email }}</td>
+          <td>{{ e.dateNaissance | date:"dd/MMM/yyyy" }}</td>
+          <td>{{ e.typeEmploye }}</td>
+          <td><a class="nav-link" href="javascript:void(0);" (click)="getdetailsUser(e.idUtilisateur)" ><i class="fa fa-info-circle"></i> Afficher les congés</a></td>
+        </tr>
+        </tbody>
+      </table>
+      <div class="container">
+        <ul class="pagination">
+          <li class="page-item" [ngClass]="{'active':i == currentPage}"  *ngFor="let p of pages; let i = index" >
+            <a class="page-link"   (click)="gotoPage(i)"> {{ i }} </a>
+          </li>
+        </ul>
+  
+      </div>
+    </div>
+  </div>
+  
