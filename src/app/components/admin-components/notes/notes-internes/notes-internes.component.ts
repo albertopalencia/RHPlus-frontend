@@ -11,6 +11,7 @@ import { NoteInterne } from 'src/app/modals/noteInterne';
 })
 export class NotesInternesComponent implements OnInit {
   
+  isPopupOpened = true;
   noteInterne : NoteInterne = new NoteInterne();
   notesInternes:NoteInterne[];
   constructor(private dialog: MatDialog, private noteInterneService:NoteinterneService) { }
@@ -19,7 +20,7 @@ export class NotesInternesComponent implements OnInit {
     this.refreshData();
   }
 
-  onAddNote(){
+  /*onAddNote(){
     const dialogConfig = new MatDialogConfig();
     dialogConfig.disableClose = true ; 
     dialogConfig.autoFocus = true ; 
@@ -28,6 +29,20 @@ export class NotesInternesComponent implements OnInit {
     let dialogRef = this.dialog.open(AjoutNoteComponent,dialogConfig);
     dialogRef.afterClosed().subscribe(result => {
       console.log(`Dialog result: ${result}`); // Pizza!
+      this.refreshData();
+    });
+  }*/
+
+  onAddNote() {
+    this.isPopupOpened = true;
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.disableClose = true ; 
+    dialogConfig.autoFocus = true ; 
+    dialogConfig.width = "40%";
+    const dialogRef = this.dialog.open(AjoutNoteComponent,dialogConfig );
+
+    dialogRef.afterClosed().subscribe(result => {
+      this.isPopupOpened = false;
       this.refreshData();
     });
   }

@@ -12,6 +12,7 @@ import { AddTodoComponent } from '../add-todo/add-todo.component';
 })
 export class TodoListComponent implements OnInit {
 
+  isPopupOpened = false;
   todo : Todo = new Todo();
   todos:Todo[];
 
@@ -21,7 +22,7 @@ export class TodoListComponent implements OnInit {
     this.refreshData();
   }
 
-  onAddNote(){
+  /*onAddTodo(){
     const dialogConfig = new MatDialogConfig();
     dialogConfig.disableClose = true ; 
     dialogConfig.autoFocus = true ; 
@@ -32,6 +33,22 @@ export class TodoListComponent implements OnInit {
       console.log(`Dialog result: ${result}`); // Pizza!
       this.refreshData();
     });
+  }*/
+
+  onAddTodo() {
+    this.isPopupOpened = true;
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.disableClose = true ; 
+    dialogConfig.autoFocus = true ; 
+    dialogConfig.width = "40%";
+    dialogConfig.height = "50%";
+    const dialogRef = this.dialog.open(AddTodoComponent,dialogConfig );
+
+    dialogRef.afterClosed().subscribe(result => {
+      this.isPopupOpened = false;
+    });
+    this.refreshData();
+
   }
 
   refreshData(){
@@ -40,6 +57,14 @@ export class TodoListComponent implements OnInit {
       response => {
         this.todos = response; }
      );
+  }
+
+  deleteTodo(todo:Todo): void {
+    this.todoService.deleteTodo(todo.id)
+      .subscribe( data => {
+        this.todos = this.todos.filter(u => u !== todo);
+      })
+    
   }
 
 }

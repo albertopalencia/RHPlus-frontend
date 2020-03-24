@@ -19,6 +19,7 @@ export class TodoService {
 
   createTodo(todoData: Todo) {
     return this.http.post(this.baseUrl + '/todos/', todoData);
+    todoData.completed=false;
       
   }
 
@@ -29,7 +30,8 @@ export class TodoService {
   }
 
   deleteTodo(id: number) {
-    return this.http.delete(this.baseUrl + '/api/todos/' + id);
+    console.log("xddd");
+    return this.http.delete(this.baseUrl + '/todos'+'/' + id);
       
   }
 

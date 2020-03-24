@@ -1,0 +1,40 @@
+
+<form class="form-horizontal style-form">
+    <div class="form-group">
+      <label class="col-sm-2 col-sm-2 control-label" >Titre</label>
+      <div class="col-sm-10">
+        <input type="text" [(ngModel)]="meeting.titre" name="titre" id="titre" placeholder="titre">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-sm-2 col-sm-2 control-label" >type</label>
+      <div class="col-sm-10">
+        <input type="text" [(ngModel)]="meeting.type" name="type" id="type" placeholder="type">
+      </div>
+    </div>
+
+    <form class="form-inline" role="form">
+
+      <div class="form-group">
+        <label class="col-sm-2 col-sm-2 control-label" >meeting Day</label>
+        <div class="col-sm-10">
+        <input type="date" [(ngModel)]="meeting.meetingDay" class="form-control" id="meetingDay" placeholder="meetingDay">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-sm-2 col-sm-2 control-label">meeting Time</label>
+        <div class="col-sm-10">
+        <input type="time" [(ngModel)]="meeting.meetingTime" class="form-control" id="meetingTime" placeholder="meetingTime">
+      </div>
+      </div>
+     
+    </form>
+
+    
+  </form>
+  
+  <button _ngcontent-roy-c3="" 
+        class="btn btn-success my-2 my-sm-0" 
+        type="submit" 
+        (click)="onSubmit()">Enregistrer</button>
+  

@@ -1,16 +1,18 @@
 
+
+
 <form class="form-horizontal style-form">
     <div class="form-group">
       <label class="col-sm-2 col-sm-2 control-label" >Titre</label>
       <div class="col-sm-10">
-        <input type="text" [(ngModel)]="noteInterne.title" name="title" id="title" placeholder="titre">
+        <input type="text" [(ngModel)]="todo.title" name="title" id="title" placeholder="titre">
       </div>
     </div>
     <div class="form-group">
-      <label class="col-sm-2 col-sm-2 control-label" >Contenu</label>
+      <label class="col-sm-2 col-sm-2 control-label" >Tache à faire</label>
       <div class="col-sm-10">
-        <textarea type="text" [(ngModel)]="noteInterne.content"  
-        name="content" id="content" placeholder="" rows="20" data-rule="required">
+        <textarea type="text" [(ngModel)]="todo.description"  
+        name="content" id="content" placeholder="" rows="5" data-rule="required">
         </textarea>
         
       </div>
@@ -23,4 +25,6 @@
         class="btn btn-success my-2 my-sm-0" 
         type="submit" 
         (click)="onSubmit()">Enregistrer</button>
+
+
 

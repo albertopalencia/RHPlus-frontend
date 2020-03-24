@@ -17,6 +17,8 @@ export class AjoutNoteComponent implements OnInit {
   ngOnInit() {
   }
 
+  
+
   onSubmit(){
   
   this.onCreateNoteInterne();

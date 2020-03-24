@@ -19,11 +19,11 @@ export class AddTodoComponent implements OnInit {
 
   onSubmit(){
   
-  this.onCreateNoteInterne();
+  this.onCreateTodo();
   this.onClose();
   }
 
-  onCreateNoteInterne():void {
+  onCreateTodo():void {
     this.todoService.createTodo(this.todo)
     .subscribe(  data => {
       alert("todo created successfully");

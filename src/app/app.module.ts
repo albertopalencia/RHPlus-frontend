@@ -46,11 +46,13 @@ import { TimetrackingComponent } from './components/employe-components/timetrack
 import { AddPresenceComponent } from './components/employe-components/add-presence/add-presence.component';
 import { AddTodoComponent } from './components/admin-components/todos/add-todo/add-todo.component';
 import { ScheduleModule } from '@syncfusion/ej2-angular-schedule';
-import { LoginComponent } from './login/login.component';
-import { RegisterComponent } from './register/register.component';
-import { authInterceptorProviders } from './helpers/auth.interceptor';
-import { HomeComponent } from './home/home.component';
-import { LandingPageComponent } from './landing-page/landing-page.component';
+import { MeetingComponent } from './components/admin-components/meetings/meeting/meeting.component';
+import { ListMeetingComponent } from './components/admin-components/meetings/list-meeting/list-meeting.component';
+//import { LoginComponent } from './login/login.component';
+//import { RegisterComponent } from './register/register.component';
+//import { authInterceptorProviders } from './helpers/auth.interceptor';
+//import { HomeComponent } from './home/home.component';
+
 
 
 @NgModule({
@@ -78,10 +80,12 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
     TimetrackingComponent,
     AddPresenceComponent,
     AddTodoComponent,
-    LoginComponent,
-    RegisterComponent,
-    HomeComponent,
-    LandingPageComponent,
+    MeetingComponent,
+    ListMeetingComponent,
+    //LoginComponent,
+    //RegisterComponent,
+    //HomeComponent,
+  
  
   
     
@@ -116,8 +120,8 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
     MatInputModule
     
   ],
-  providers: [EmployeService,CandidateService,TodoService,EmailService,authInterceptorProviders],
+  providers: [EmployeService,CandidateService,TodoService,EmailService],
   bootstrap: [AppComponent],
-  entryComponents:[AjoutNoteComponent]
+  entryComponents:[AjoutNoteComponent,AddTodoComponent,MeetingComponent]
 })
 export class AppModule { }

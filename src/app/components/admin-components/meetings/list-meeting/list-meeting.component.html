@@ -1,0 +1,48 @@
+<div _ngcontent-roy-c3="" class="card-header text-light bg-secondary" style="margin-top: 3%;"> Notes Internes </div>
+<div _ngcontent-roy-c3="" class="card-body bg-light">
+    <form _ngcontent-roy-c3="" class="form-inline my-2 my-lg-0 ng-untouched ng-pristine ng-valid" novalidate="">
+        <input _ngcontent-roy-c3="" aria-label="Search" class="form-control mr-sm-2 ng-untouched ng-pristine ng-valid" name="motCle" placeholder="Recherche" type="search" ng-reflect-name="motCle">
+        <button _ngcontent-roy-c3="" class="btn btn-success my-2 my-sm-0" type="submit">Chercher</button>
+    </form>
+    <br _ngcontent-roy-c3="">
+    
+    <button _ngcontent-roy-c3="" class="btn btn-success my-2 my-sm-0" type="submit" (click)="onAddNote()">Ajouter une note interne</button>
+    <br><br><br>
+    <div class="row justify-content-center">
+        <div class="col-md-10">
+    <table class="table table-striped card-body text" style="padding-left:50%;padding-right:10%">
+    
+        <thead class="thead-inverse">
+        <tr>
+          <th>titre</th>
+          <th>type</th>
+          <th>meeting Day</th>
+          <th>meeting Time</th>
+          <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let meeting of meetings" >
+                <td>{{meeting.titre}}</td>
+                <td>{{meeting.type}}</td>
+                <td>{{meeting.meetingDay}}</td>
+                <td>{{meeting.meetingTime}}</td>
+                
+                <td>
+                    <div class="pull-right hidden-phone" >
+                        <button class="btn btn-primary btn-xs" (click)="onEdit(row)"><i class="fa fa-pencil"></i></button> 
+                    <button class="btn btn-danger btn-xs" (click)="deleteNote(noteInterne)"><i class="fa fa-trash-o "></i></button>
+                    </div>
+                  
+              
+                </td>
+    
+               
+            </tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+</div>
+
+
