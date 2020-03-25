@@ -48,11 +48,10 @@ import { AddTodoComponent } from './components/admin-components/todos/add-todo/a
 import { ScheduleModule } from '@syncfusion/ej2-angular-schedule';
 import { MeetingComponent } from './components/admin-components/meetings/meeting/meeting.component';
 import { ListMeetingComponent } from './components/admin-components/meetings/list-meeting/list-meeting.component';
-//import { LoginComponent } from './login/login.component';
-//import { RegisterComponent } from './register/register.component';
-//import { authInterceptorProviders } from './helpers/auth.interceptor';
-//import { HomeComponent } from './home/home.component';
-
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
+import { HomeComponent } from './components/home/home.component';
+import { authInterceptorProviders } from './helpers/auth.interceptor';
 
 
 @NgModule({
@@ -82,6 +81,9 @@ import { ListMeetingComponent } from './components/admin-components/meetings/lis
     AddTodoComponent,
     MeetingComponent,
     ListMeetingComponent,
+    LoginComponent,
+    RegisterComponent,
+    HomeComponent,
     //LoginComponent,
     //RegisterComponent,
     //HomeComponent,
@@ -120,7 +122,7 @@ import { ListMeetingComponent } from './components/admin-components/meetings/lis
     MatInputModule
     
   ],
-  providers: [EmployeService,CandidateService,TodoService,EmailService],
+  providers: [EmployeService,CandidateService,TodoService,EmailService,authInterceptorProviders],
   bootstrap: [AppComponent],
   entryComponents:[AjoutNoteComponent,AddTodoComponent,MeetingComponent]
 })

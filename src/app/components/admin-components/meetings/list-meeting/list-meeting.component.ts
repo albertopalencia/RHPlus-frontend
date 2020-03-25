@@ -14,7 +14,7 @@ export class ListMeetingComponent implements OnInit {
   isPopupOpened = true ; 
   meeting : Meeting = new Meeting();
   meetings : Meeting[];
-
+  
   constructor(private dialog:MatDialog, private meetingService:MeetingService) { }
 
   ngOnInit() {
